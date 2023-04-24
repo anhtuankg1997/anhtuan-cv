@@ -1,0 +1,70 @@
+/* Education content */
+#education{
+    position: relative;
+}
+
+#edu-content:before, #experience:before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 124px;
+    background-color: var( --line-experience-color);
+}
+
+#edu-content{
+    position: relative;
+}
+
+.edu-item{
+    margin: 0 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.edu-item:last-child{
+    padding-bottom: 5px;
+}
+
+
+.edu-year{
+    width: 100px;
+    text-align: right;
+    font-size: .75rem;
+    font-style: italic;
+    position: relative;
+    left: 0;
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
+.edu-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var( --line-experience-color);
+    margin: 0 10px;
+    z-index: 11;
+    position: relative;
+}
+
+.edu-text{
+    font-size: .9rem;
+    flex: 1;
+    color: var(--text-color-light);                                  
+}
+
+#experience{
+    position: relative;
+    margin-top: 10px;
+}
+
+#exp-header{
+    font-size: 1.21rem;
+    color: var(--text-color-medium);
+    margin-top: 20px;
+}
+
+/* Education content */

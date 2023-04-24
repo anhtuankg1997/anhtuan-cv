@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nguyễn Anh Tuấn</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body onload="initialize()" onresize="changeScreenSize()">
+    <div id="container">
+        <div id="headerbar">
+            <div id="headerbar-left" onclick="clickOnHeaderItem()">
+                <img src="./img/avatar.jpg" alt="">
+                <h3>Anh Tuan Nguyen</h3>
+            </div>
+        </div>
+
+        <div id="sidebar-left">
+            <div id="sidebar-avatar-section">
+                <img id="sidebar-avatar" src="./img/avatar.jpg" alt="">
+                <h3 id="sidebar-username">Anh Tuan</h3>
+                <h5 id="sidebar-jobname">Front-end Developer</h5>
+                <div id="sidebar-social-link">
+                    <div class="sidebar-social-link-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="sidebar-social-link-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="sidebar-social-link-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sidebar-person-info-section">
+                <div class="sidebar-pis-item">
+                    <i class="fas fa-calendar"></i>
+                    <p>Sep 6, 1997</p>
+                </div>
+                <div class="sidebar-pis-item">
+                    <i class="fas fa-map-signs"></i>
+                    <p>Kiengiang, Vietnam</p>
+                </div>
+                <div class="sidebar-pis-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <p>anhtuankg1997@gmail.com</p>
+                </div>
+                <div class="sidebar-pis-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(+84) 946 283 526</p>
+                </div>
+                <div class="sidebar-pis-item">
+                    <i class="fab fa-skype"></i>
+                    <p>anhtuankg1997</p>
+                </div>
+
+                <div id="download-sibar-section">
+                    <a href="https://drive.google.com/file/d/1BeLNvuiEMWUMNIeKnvQ9rEto0ZGb2TMB/view?usp=sharing"
+                       target="_blank"
+                       id="download-btn"
+                    >
+                        Download File
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar">
+             <div id="sidebar-right" onclick="clickOnGrayScreen()">
+            </div>
+        </div>
+
+
+        <div id="card">
+            <div id="card-header-draw">
+                <div id="card-header">
+                    <div id="btn"></div>
+                    <h4 class="header-item" onclick="clickHeaderItem(this)" id="about">About</h4>
+                    <h4 class="header-item" onclick="clickHeaderItem(this)" id="education">Education</h4>
+                    <h4 class="header-item" onclick="clickHeaderItem(this)" id="skills">Skills</h4>
+                    <h4 class="header-item" onclick="clickHeaderItem(this)" id="products">Products</h4>
+                </div>
+            </div>
+
+            <div id="card-body">
+                <div id="cbody-left">
+                    <div id="avatar-section">
+                        <img id="avatar" src="./img/avatar.jpg" alt="">
+                        <h3 id="username">Anh Tuan Nguyen</h3>
+                        <h5 id="jobname">Front-end Developer</h5>
+                        <div id="social-link">
+                            <div class="social-link-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="social-link-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="social-link-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="person-info-section">
+                        <div class="pis-item">
+                            <i class="fas fa-calendar"></i>
+                            <p>Sep 6, 1997</p>
+                        </div>
+                        <div class="pis-item">
+                            <i class="fas fa-map-signs"></i>
+                            <p>Kiengiang, Vietnam</p>
+                        </div>
+                        <div class="pis-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <p>anhtuankg1997@gmail.com</p>
+                        </div>
+                        <div class="pis-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>(+84) 946 283 526</p>
+                        </div>
+                        <div class="pis-item">
+                            <i class="fab fa-skype"></i>
+                            <p>anhtuankg1997</p>
+                        </div>
+                    </div>
+
+                    <div id="download-section">
+                        <a href="https://drive.google.com/file/d/1BeLNvuiEMWUMNIeKnvQ9rEto0ZGb2TMB/view?usp=sharing"
+                           target="_blank"
+                           id="download"
+                        >
+                            Download File
+                        </a>
+                    </div>
+
+                </div>
+
+                <div id="cbody-right">
+                    <div id="cright-header">
+                        <div id="header-content-section-text"></div>
+                        <div id="line-section">
+                            <div class="line line--short line--red"></div>
+                            <div class="line line--long line--blue"></div>
+                        </div>
+                    </div>
+
+
+                    <div id="content">
+                        <div class="content-item" id="about-content" >
+                            <div id="about-content-intro">
+                                After having worked for a couple of years in my university, I realized my strength is creating a modern web design. In my team, I'm in charge of make front end of App or Website.
+                                I believe my best trait is my attention to detail. This trait has helped me tremendously in this field of work.  I really enjoyed the work that create a nice experience for my users.
+                                A hobby that I enjoy is using the computer. Surfing the internet is what I mostly do whenever I have free time to learn anything about web-app design.
+                            </div>
+
+
+                            <h4 id="header-favo-text">Hobbies</h4>
+                            <div id="about-content-favorite">
+                                <div class="favorite-item">
+                                    <div class="favorite-item-img">
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                    <h3 class="favorite-item-headtext">Reading Books</h3>
+                                    <p class="favorite-item-text">I have collected various types of books. I've been reading  a lot of IT books.</p>
+                                </div>
+
+                                <div class="favorite-item">
+                                    <div class="favorite-item-img">
+                                        <i class="fas fa-music"></i>
+                                    </div>
+                                    <h3 class="favorite-item-headtext">Listen to Music</h3>
+                                    <p class="favorite-item-text ">when I fill myself with the sorrow, I love the songs which can share my sadness.</p>
+                                </div>
+
+                                <div class="favorite-item">
+                                    <div class="favorite-item-img">
+                                        <i class="fas fa-futbol"></i>
+                                    </div>
+                                    <h3 class="favorite-item-headtext ">Play Sports</h3>
+                                    <p class="favorite-item-text ">I play many different sports in my free time; some of them are soccer, swimming,.. </p>
+                                </div>
+
+                                <div class="favorite-item">
+                                    <div class="favorite-item-img">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <h3 class="favorite-item-headtext ">Drawing</h3>
+                                    <p class="favorite-item-text ">I guess my life would be less colorful without drawing.</p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="content-item" id="education-content">
+                            <div id="edu-content">
+                                <div class="edu-item">
+                                    <p class="edu-year">2009 - 2013</p>
+                                    <div class="edu-circle"></div>
+                                    <p class="edu-text">Nguyen Truong To Secondary School</p>
+                                </div>
+                                <div class="edu-item">
+                                    <p class="edu-year">2013 - 2015</p>
+                                    <div class="edu-circle"></div>
+                                    <p class="edu-text">Huynh Man Dat Specialized And Gifted School</p>
+                                </div>
+                                <div class="edu-item">
+                                    <p class="edu-year">2015 - current</p>
+                                    <div class="edu-circle"></div>
+                                    <p class="edu-text">University of Information Technology </p>
+                                </div>
+                            </div>
+
+                            <h3 id="exp-header">Work Experience</h3>
+                            <div id="experience">
+                                <div class="edu-item">
+                                    <p class="edu-year">4/2019 - 6/2019</p>
+                                    <div class="edu-circle"></div>
+                                    <p class="edu-text">Java Intership at Fujinet JSC</p>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="content-item" id="skills-content">
+                            <h3 class="content-item-header">Web Development Core</h3>
+                            <div class="web-dev">
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>HTML 5</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>CSS 3</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Javascript</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h3 class="content-item-header" style="padding-top: 20px">
+                                Javascript Framework/Library
+                            </h3>
+                            <div class="web-dev">
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>React</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-angular"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Angular</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-vuejs"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Vue</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h3 class="content-item-header" style="padding-top: 20px">
+                               UI / UX Design
+                            </h3>
+                            <div class="web-dev">
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <img src="./img/experience.png" alt="">
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Adobe XD</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <img src="./img/adobe-photoshop.png" alt="">
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Photoshop</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <img src="./img/adobe-illustrator.png" alt="">
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Illustrator</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="content-item-header" style="padding-top: 20px">
+                               Server Side
+                            </h3>
+                            <div class="web-dev">
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fab fa-node-js"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Node JS</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills-item">
+                                    <div class="skills-item-left">
+                                        <i class="fas fa-fire-alt"></i>
+                                    </div>
+                                    <div class="skills-item-right">
+                                        <p>Firebase</p>
+                                        <div class="skill-progress">
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                            <div class="skill-progress-line"></div>
+                                        </div>
+                                        <div class="exp-progress">
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                            <div class="exp-progress-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="content-item" id="products-content">
+                            <div class="product-item">
+                                <div class="product-item-name">
+                                    <h3>Castle Vania</h3>
+                                </div>
+                                <a class="product-item-img" href="https://github.com/anhtuannguyenkg1997/CastleVania" target="_blank">
+                                    <i class="fab fa-xbox"></i>
+                                </a>
+                                <div class="product-item-year">
+                                    <p>7 / 2020</p>
+                                </div>
+                                <div class="product-item-tech">
+                                    <div class="tech-item">DirectX 9</div>
+                                    <div class="tech-item">C++ </div>
+                                </div>
+                                <div class="product-item-detail">
+                                    This is a  90's game, include sprites, animation, effect, music and so on.
+                                </div>
+                            </div>
+
+
+                            <div class="product-item">
+                                <div class="product-item-name">
+                                    <h3>Historical Street</h3>
+                                </div>
+                                <a href="https://github.com/bdtren/DACN_HistoricalStreet" class="product-item-img" target="_blank">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </a>
+                                <div class="product-item-year">
+                                    <p>12 / 2019</p>
+                                </div>
+                                <div class="product-item-tech">
+                                    <div class="tech-item">React Native</div>
+                                    <div class="tech-item">MongoDB</div>
+                                    <div class="tech-item">SpringBoot</div>
+                                    <div class="tech-item">OpenCV</div>
+                                    <div class="tech-item">UI/UX Design</div>
+                                </div>
+                                <div class="product-item-detail">
+                                     Study history when you walking through every streets which named folk heroes.
+                                </div>
+                            </div>
+
+                            <div class="product-item">
+                                <div class="product-item-name">
+                                    <h3>LoveMarket</h3>
+                                </div>
+                                <a class="product-item-img" href="https://github.com/anhtuankg1997/DTTV.UIT.CNPMChuyenSau.BanDoNguoiYeuCu" target="_blank">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <div class="product-item-year">
+                                    <p>7 / 2019</p>
+                                </div>
+                                <div class="product-item-tech">
+                                    <div class="tech-item">HTML</div>
+                                    <div class="tech-item">CSS</div>
+                                    <div class="tech-item">JS</div>
+                                    <div class="tech-item">PHP</div>
+                                    <div class="tech-item">MySQL</div>
+                                </div>
+                                <div class="product-item-detail">
+                                    Like Chotot, we provide a method for salers to sell their old gifts and for buyer to buy those products.
+                                </div>
+                            </div>
+
+
+                            <div class="product-item">
+                                <div class="product-item-name">
+                                    <h3>Household Book Management</h3>
+                                </div>
+                                <a class="product-item-img" href="https://github.com/bdtren/SE100.J11_DTTV_QLHoKhau" target="_blank">
+                                    <i class="far fa-window-maximize"></i>
+                                </a>
+                                <div class="product-item-year">
+                                    <p>7 / 2019</p>
+                                </div>
+                                <div class="product-item-tech">
+                                    <div class="tech-item">C# - Winform</div>
+                                    <div class="tech-item">LINQ</div>
+                                    <div class="tech-item">SQL Server</div>
+                                    <div class="tech-item">MySQL</div>
+                                </div>
+                                <div class="product-item-detail">
+                                    Help manager to manage information about citizens such as insert, edit, update, print information of a family.
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

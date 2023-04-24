@@ -1,0 +1,117 @@
+/* Skills content */
+#skills-content{
+    padding: 0 10px;
+}
+
+.web-dev{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.content-item-header{
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color-medium);
+}
+
+.skills-item{
+    padding: 10px 15px;
+    border-radius: 45px;
+    background-color: var( --grass-color);
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.skills-item-left{
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--btn-left-color-sweet), var(--btn-right-color-sweet));
+    border: 2px solid #fff;
+    display: flex;
+}
+
+.skills-item-left i{
+    margin: auto;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.skills-item-right{
+    margin-left: 10px;
+}
+
+.skills-item-right > p{
+    font-size: .72rem;
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+.skill-progress{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.exp-progress{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 4px;
+}
+
+
+.skill-progress-line{
+    width: 0;
+    height: 4px;
+    background-color: var(--exp-line-color);
+    border-radius: 40%;
+    margin-right: 2px;
+    transition: all .3s ease-in-out;
+}
+
+.skill-progress-ani{
+    width: 15px;
+}
+
+
+.exp-progress-line{
+    width: 0;
+    height: 3px;
+    background-color: var(--progress-line-color);
+    border-radius: 40%;
+    margin-right: 2px;
+    transition: all .3s ease-in-out;
+}
+
+.exp-progress-ani{
+    width: 10px;
+}
+
+
+
+@keyframes aniSkillLineProgress{
+    from{
+        width: 0;
+    }
+    to{
+        width: 15px;
+    }
+}
+
+@keyframes aniSkillLineExp{
+    from{
+        width: 0;
+    }
+    to{
+        width: 10px;
+    }
+}
+
+
+/* Skills content */

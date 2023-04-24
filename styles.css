@@ -1,0 +1,272 @@
+@import "css/header.css";
+@import "css/sidebar.css";
+
+@import "css/about.css";
+@import "css/edu.css";
+@import "css/skills.css";
+@import "css/products.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow: -moz-scrollbars-none;
+}
+
+:root{
+    --white-color: #ffffff;
+    --grass-color-light: rgba(255,255,255,.1);
+    --grass-color: rgba(255, 255, 255, 0.5);
+    --bg-left-color: #0094ff;
+    --bg-right-color: #9500ff;
+
+    --btn-left-color: #002ef8;
+    --btn-right-color: #9d00ff;
+
+    --btn-left-color-sweet: #20abec;
+    --btn-right-color-sweet: #bc00ff;
+
+    --bg-color-glass: #b4b3ff;
+    --bg-color-glass-2: #cecedb;
+    --bg-color-glass-heavy: rgba(255,255,255, .3);
+
+    --card-border-radius: 15px;
+
+    --text-color-light: #454545;
+    --text-color-medium: #494646;
+    --text-color-dark: #2d2d2d;
+
+    --text-white-light: #dcdcdc;
+
+    --color-badge: #f4f2f6;
+
+    --progress-line-color: #007dff;
+    --exp-line-color: #7600fa;
+
+    --line-experience-color: #9924ff;
+}
+
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, var(--bg-left-color), var(--bg-right-color));
+    display: flex;
+    position: relative;
+}
+
+
+#card{
+    margin: auto auto;
+    position: relative;
+    font-weight: normal;
+}
+
+
+
+
+#card-body{
+    display: flex;
+    width: 800px;
+    position: relative;
+    background: var(--bg-color-glass);
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
+    border-top-left-radius: var(--card-border-radius);
+}
+
+
+
+/* END HEADER MAIN ^/
+
+
+
+
+
+
+
+
+
+/* START CARD BODY RIGHT */
+#cbody-right{
+    flex: 1;
+    font-family: 'PT Serif', serif;
+}
+
+#cright-header{
+    margin: 20px 15px 0 15px;
+}
+
+.content-header-text{
+    font-size: 1.42rem;
+    animation-name: textAni;
+    animation-duration: .6s;
+    transform-origin: -10px;
+    color: var(--text-color-medium);
+    font-weight: bold;
+    padding: 0;
+}
+
+@keyframes textAni {
+    from{
+        opacity: 0;
+        transform: scale(3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#line-section{
+    display: flex;
+}
+
+.line{
+    height: 4px;
+}
+.line--red{
+    background-color: #ee6700;
+}
+.line--blue{
+    background-color: #5900ff;
+}
+.line--short{
+    width: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.line--long{
+    width: 45px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+#content{
+    margin: 10px 15px 10px 15px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 380px;
+}
+
+.content-item{
+    width: 100%;
+    transition: .5s;
+    position: absolute;
+}
+
+#aboutme-content{
+    left: 0;
+    overflow: auto;
+}
+
+#education-content, #skills-content, #products-content{
+    left: 570px;
+    overflow: auto;
+}
+
+/* END CARD BODY RIGHT */
+
+
+
+
+
+/* SCROLL BAR CUSTOM ^/
+ /* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px ) {
+    #card{
+        width: 77%;
+    }
+
+    #card-body{
+        display: flex;
+        width: 100%;
+        position: relative;
+        border-top-left-radius: 0;
+    }
+
+    #card-header-draw{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top:0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--bg-color-glass-2);
+        border-top-left-radius: var(--card-border-radius);
+        border-top-right-radius: var(--card-border-radius);
+    }
+    #card-header{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .header-item{
+        font-size: .75rem;
+        text-transform: uppercase;
+        z-index: 1;
+        transition: .5s;
+        will-change: color;
+
+    }
+}
+
+
+@media only screen and (max-width: 525px) {
+    #about-content-favorite{
+        flex-direction: column;
+    }
+    .favorite-item{
+        width: 100%;
+    }
+    .product-item{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .header-item{
+        padding: 0 5px;
+        font-size: .65rem;
+    }
+    .edu-item{
+        flex-direction: column;
+    }
+    #edu-content:before, #experience:before{
+        display: none;
+    }
+    .edu-circle{
+    display: none;
+     }
+    .edu-year{
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+
+
+@media only screen and (max-width: 358px) {
+    .header-item{
+        padding: 0;
+        font-size: .65rem;
+    }
+}

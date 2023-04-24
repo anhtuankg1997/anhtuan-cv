@@ -1,0 +1,115 @@
+/* Products content */
+#products-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item{
+    background-color: var( --grass-color-light);
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10px;
+    border: 2px solid  var( --grass-color);
+    border-radius: 15px;
+}
+
+.product-item-name{
+    padding: 10px;
+    border-bottom-style: solid;
+    border-color: var( --grass-color);
+    border-bottom-width: 2px;
+    width: 100%;
+    font-size: 0.85rem;
+    height: 70px;
+    display: flex;
+}
+
+.product-item-name h3{
+    margin: auto;
+    text-align: center;
+    color: var( --text-color-light );
+    font-size: .85rem;
+}
+
+.product-item-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+    display: flex;
+    position: absolute;
+    top: 50px;
+    transition: all ease-in-out;
+    background-size: 80px;
+    background: linear-gradient(45deg, var(--btn-left-color-sweet), var(--btn-right-color-sweet)) 50px 0;
+    background-position: 0 0;
+    text-decoration: none;
+}
+
+.product-item-img:hover{
+    animation: animateProductImage .4s ease-in-out;
+    cursor: pointer;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@keyframes animateProductImage {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background: linear-gradient(45deg, #ff03dd, #00badb);
+       background-position: 35px 0;
+    }
+}
+
+
+.product-item-img i{
+    margin: auto;
+    color: var(--white-color);
+}
+
+.product-item-year{
+    margin-top: 25px;
+    color: var(--text-color-medium);
+    font-size: .6rem;
+}
+
+.product-item-year p{
+    font-size: .72rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.product-item-tech{
+    width:  98%;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-item{
+    padding: 3px 6px;
+    background-color: rgba(255,255,255,.35);
+    font-size: .60rem;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: var( --text-color-dark);
+    margin-right: 5px;
+}
+
+.product-item-detail{
+    padding: 4px 10px 15px;
+    font-size: .71rem;
+    text-align: center;
+    color: var(--text-color-dark);
+}
+
+
+/* Products content */
